@@ -11,7 +11,7 @@ app.set('view engine','ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://Sudhanshu0907:Sudhanshu0907@cluster0.imtzp.mongodb.net/todolistDB",{useNewUrlParser:true});
+mongoose.connect("mongodb+srv://Sudhanshu0907:Sudhanshu0907@cluster0.imtzp.mongodb.net/vtodolistDB",{useNewUrlParser:true});
 
 const todoList={
     list:String
@@ -159,7 +159,10 @@ app.get("/about",function(req,res){
 })
 
  
-
-app.listen(3000,function(){
-    console.log("currently on port 3000")
+let port = process.env.PORT;
+if(port==null||port==""){
+    port=3000;
+}
+app.listen(port,function(){
+    console.log("Server has started sucessfully")
 })
