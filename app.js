@@ -140,18 +140,6 @@ app.post("/delete",function(req,res){
     
 });
 
-app.get("/work",function(req,res){
-    // console.log(req.body.todo1);
-    res.render("list",{listTitle: "Work List",newitems:woekItems});
-    // res
-})
-
-app.post("/work",function(req,res){
-    let item=res.body.todo1;
-    woekItems.push(item);
-    res.redirect("/work");
-})
-
 
 
 app.get("/about",function(req,res){
