@@ -11,7 +11,7 @@ app.set('view engine','ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://Sudhanshu0907:Sudhanshu0907@cluster0.imtzp.mongodb.net/vtodolistDB",{useNewUrlParser:true});
+mongoose.connect("mongodb+srv://Sudhanshu0907:Sudhanshu0907@cluster0.imtzp.mongodb.net/todolistDB",{useNewUrlParser:true});
 
 const todoList={
     list:String
